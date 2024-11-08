@@ -235,6 +235,12 @@ test("no surprise category", async () => {
     'CDP Manager',
     'Governance Incentives',
     'Restaked BTC',
+    'Security Extension',
+    'Anchor BTC',
+    'AI Agents',
+    'Treasury Manager',
+    'OTC Marketplace',
+    'Yield Lottery'
   ]
   for (const protocol of protocols) {
     expect(whitelistedCategories).toContain(protocol.category);

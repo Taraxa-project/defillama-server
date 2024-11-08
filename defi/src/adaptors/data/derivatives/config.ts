@@ -79,7 +79,7 @@ export default {
     "dydx": {
         parentId: "dYdX",
         "id": "144",
-        "enabled": true
+        disabled: true
     },
     "level-finance": {
         "id": "2395",
@@ -431,7 +431,7 @@ export default {
         }
     },
     "rabbitx": {
-        enabled: false,
+        enabled: true,
         "id": "2886",
         parentId: "RabbitX Fusion",
         cleanRecordsConfig: {
@@ -725,5 +725,30 @@ export default {
     },
     "trado": {
         id: "5208",
+    },
+    "quickswap-perps": {
+        parentId: "QuickSwap",
+        id: "2980",
+    },
+    "capybara-perp": {
+        parentId: "Capybara Exchange",
+        id: "5257",
+    },
+    "defx": {
+        id: "5273",
+    },
+    "surge-trade": {
+        id: "5290"
+    },
+    "optim-finance": {
+        id: "2380",
+        protocolsData: {
+            "derivatives": {
+                "id": "2380",
+            }
+        }
+    },
+    "quenta": {
+        id: "5314"
     }
 } as AdaptorsConfig

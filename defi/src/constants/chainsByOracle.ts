@@ -1,4 +1,4 @@
-const chainsByOracle = {
+const chainsByOracle: Record<string, Array<string>> = {
   "Supra": [
     "Aptos",
     "Aurora",
@@ -151,7 +151,7 @@ const chainsByOracle = {
   ],
   "Switchboard": ["Solana", "Ethereum", "CORE", "Arbitrum", "Optimism", "Base", "Aurora", "Aptos", "Sui"],
   "RedStone": [
-    "Ethereum", 
+    "Ethereum",
     "Arbitrum",
     "Optimism",
     "Blast",
@@ -206,7 +206,7 @@ const chainsByOracle = {
     "Beam",
     "Milkomeda C1",
     "Dogechain",
-    "Sei"
+    "Sei",
   ],
   "UMA": ["Ethereum", "Polygon", "Boba", "Optimism", "Arbitrum", "Gnosis", "Avalanche"],
   "API3": [
@@ -225,8 +225,29 @@ const chainsByOracle = {
     "Optimism",
     "Polygon",
     "Polygon zkEVM",
-    "Rootstock",
-    "Sei"
+    "Sei",
+    "Mode",
+    "Astar zkEVM",
+    "Bitlayer",
+    "Blast",
+    "BOB",
+    "Core",
+    "Fraxtal",
+    "inEVM",
+    "Kroma",
+    "Lightlink",
+    "Lukso",
+    "Manta",
+    "Merlin",
+    "Metis",
+    "Metal",
+    "Rari",
+    "Scroll",
+    "opBNB",
+    "Taiko",
+    "X Layer",
+    "Zircuit",
+    "Lumia"
   ],
   "Band": [
     "CLV",
@@ -353,7 +374,18 @@ const chainsByOracle = {
     "Base",
     "Polygon zkEVM",
     "Mantle",
-    "Scroll"
+    "Scroll",
+  ],
+  "eOracle": [
+    "Base",
+    "Blast",
+    "Linea",
+    "Mode",
+    "Morph",
+    "Polygon zkEVM",
+    "Scroll",
+    "Taiko",
+    "zkLink Nova"
   ],
 };
 

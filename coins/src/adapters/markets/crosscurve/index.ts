@@ -28,6 +28,15 @@ const contracts: string[] = [
   "0xf91eb98d5ff86718234ac0e400175a05df6cfcf1", // sWETH_m
   "0x62c8359b2734e5dd6adb528ad2c78159a3f2607e", // sWETH_l
   "0x8fd195b2ff1506c1c26091422768cc2a40285ce7", // sWETH_t
+
+  "0x2daDf589F616876E21c8BA63f59Af764479A422d", // s2BTC_e
+  "0x636cc0ab717be347FF3ACF9763afBaF7D2Cf47A9", // s2BTC_ar
+  "0x513a766F7b4269590850D566B64916D691a96927", // s2BTC_o
+  "0x9BDe91F652B78F6Ab22084bDE4ECc0767f360Df0", // sBTC.b_av
+  "0xcaF01AC3FA0aC969dA7a399388f02791F0471955", // sWBTC_p
+  "0x210B2AddE074a220bCEA99051f90acD049977814", // sBTCB_b
+  "0xfEa2c4377f556e35B1ddE85e80a2816F601c8D6c", // scbBTC_ba
+  "0xa6c60E1C7431561971398b79Fe6B0Bf02E9f0E6C", // sWBTC_l
 ];
 
 const portal: string = "0xAc8f44ceCa92b2a4b30360E5bd3043850a0FFcbE";
@@ -100,7 +109,7 @@ export async function crosscurve(timestamp: number = 0) {
         params: portal,
         chain: chains[i],
         abi: "erc20:balanceOf",
-      }),
+      }).catch(_r => undefined)
     ),
   );
 
@@ -112,7 +121,7 @@ export async function crosscurve(timestamp: number = 0) {
 
   const writes: Write[] = [];
   contracts.map((c: string, i: number) => {
-    if (!underlyingPrices[i].length) return;
+    if (!underlyingPrices[i].length || !balances[i]) return;
     const price = (underlyingPrices[i][0].price * balances[i]) / supplies[i];
     addToDBWritesList(
       writes,

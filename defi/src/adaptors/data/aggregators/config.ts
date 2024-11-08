@@ -257,5 +257,14 @@ export default {
   },
   "jeton": {
     id: "5213",
+  },
+  "hinkal": {
+      id: "4487"
+  },
+  "unizen": {
+    id: "1336",
+  },
+  "navi": {
+    id: "5326",
   }
 } as AdaptorsConfig;
